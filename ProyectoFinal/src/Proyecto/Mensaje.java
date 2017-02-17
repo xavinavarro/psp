@@ -1,19 +1,47 @@
-package Proyecto;
+package proyectomensajeria;
 
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import java.io.Serializable;
 
-public class Mensaje {
+/**
+ *
+ * @author JORCH
+ */
+public class Mensaje implements Serializable{
+    private Integer codigo;
+    private String usuario;
+    private String mensaje;
+    
+    public Mensaje (){
+        
+    }
+    public Mensaje (Integer codigo, String usuario, String mensaje){
+        this.codigo = codigo;
+        this.usuario = usuario;
+        this.mensaje = mensaje;
+    }
 
-	public static void main (String[] args) {
-			try{
-				System.out.println("");
+    public Integer getCodigo() {
+        return codigo;
+    }
 
-				String mensaje = new String();
-		}catch(IOException e){
-			
-		}
-	}
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+    
 }
